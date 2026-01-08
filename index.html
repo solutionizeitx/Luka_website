@@ -31,15 +31,54 @@
       </div>
     </nav>
 
-    <!-- Hero (Parallax) -->
-    <header class="hero parallax d-flex align-items-center" id="home" data-parallax>
-      <div class="overlay"></div>
-      <div class="container text-center text-white position-relative">
-        <h1 class="display-5 fw-bold">We craft stories that sell.</h1>
-        <p class="lead mb-4">Creative advertising & brand experiences for ambitious companies.</p>
-        <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+    <!-- Hero (Parallax Carousel) -->
+    <section id="home" class="hero-carousel-wrapper">
+      <div id="heroCarousel" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-seed="hero1" style="background-image:url('https://picsum.photos/seed/hero1/1600/900')">
+            <div class="overlay"></div>
+            <div class="container text-center text-white position-relative">
+              <h1 class="display-5 fw-bold">We craft stories that sell.</h1>
+              <p class="lead mb-4">Creative advertising & brand experiences for ambitious companies.</p>
+              <a href="#about" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-seed="hero2" style="background-image:url('https://picsum.photos/seed/hero2/1600/900')">
+            <div class="overlay"></div>
+            <div class="container text-center text-white position-relative">
+              <h1 class="display-5 fw-bold">Bold ideas. Real impact.</h1>
+              <p class="lead mb-4">Campaigns that move audiences and metrics.</p>
+              <a href="#about" class="btn btn-primary btn-lg">See Our Work</a>
+            </div>
+          </div>
+
+          <div class="carousel-item" data-seed="hero3" style="background-image:url('https://picsum.photos/seed/hero3/1600/900')">
+            <div class="overlay"></div>
+            <div class="container text-center text-white position-relative">
+              <h1 class="display-5 fw-bold">Design with purpose.</h1>
+              <p class="lead mb-4">From strategy to execution — we deliver excellence.</p>
+              <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </header>
+    </section>
 
     <main class="mt-5 pt-5">
       <!-- About -->

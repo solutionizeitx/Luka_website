@@ -8,6 +8,51 @@ body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica
 /* offset for fixed navbar */
 main{padding-top:3rem}
 
+/* Hero carousel with parallax-friendly slides */
+.hero-carousel-wrapper{position:relative}
+.hero-carousel{min-height:78vh}
+.hero-carousel .carousel-item{
+  min-height:78vh;
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  position:relative;
+}
+.hero-carousel .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,14,23,0.45), rgba(8,9,18,0.55));}
+@media (min-width:992px){
+  .hero-carousel .carousel-item{background-attachment:fixed}
+}
+@media (max-width:991px){
+  .hero-carousel .carousel-item{background-attachment:scroll}
+  .hero-carousel{min-height:56vh}
+}
+
+/* small smoothing for background-position movement */
+.hero-carousel .carousel-item{transition:background-position 0.2s linear}
+
+/* Visual tweaks */
+h1,h2,h3,h4{color:var(--dark)}
+.btn-primary{background:var(--brand); border:0}
+.navbar-brand img{object-fit:cover}
+
+/* Clients images */
+#clients img{filter:grayscale(20%); opacity:.95}
+
+/* Footer */
+footer{font-size:.9rem}
+
+/* Smooth anchor offset helper */
+:target{scroll-margin-top:86px}
+:root{
+  --brand: #0d6efd;
+  --dark: #0b1220;
+}
+html{scroll-behavior:smooth}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#222}
+
+/* offset for fixed navbar */
+main{padding-top:3rem}
+
 .hero{
   min-height:78vh;
   background-image: url('https://picsum.photos/seed/hero/1600/900');
