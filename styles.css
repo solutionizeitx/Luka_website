@@ -1,0 +1,40 @@
+:root{
+  --brand: #0d6efd;
+  --dark: #0b1220;
+}
+html{scroll-behavior:smooth}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#222}
+
+/* offset for fixed navbar */
+main{padding-top:3rem}
+
+.hero{
+  min-height:78vh;
+  background-image: url('https://picsum.photos/seed/hero/1600/900');
+  background-size:cover;
+  background-position:center center;
+  position:relative;
+}
+.hero .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(13,14,23,0.45), rgba(8,9,18,0.55));}
+.hero .container{z-index:2}
+
+/* parallax fallback and mobile adjustments */
+.parallax{background-attachment:fixed}
+@media (max-width:991px){
+  .parallax{background-attachment:scroll}
+  .hero{min-height:56vh}
+}
+
+/* Visual tweaks */
+h1,h2,h3,h4{color:var(--dark)}
+.btn-primary{background:var(--brand); border:0}
+.navbar-brand img{object-fit:cover}
+
+/* Clients images */
+#clients img{filter:grayscale(20%); opacity:.95}
+
+/* Footer */
+footer{font-size:.9rem}
+
+/* Smooth anchor offset helper */
+:target{scroll-margin-top:86px}
