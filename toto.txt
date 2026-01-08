@@ -1,0 +1,9 @@
+home
+feature
+portfolio
+skills
+counter
+testimonial
+blog
+brand
+contact
